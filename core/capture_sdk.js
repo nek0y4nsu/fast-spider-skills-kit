@@ -37,7 +37,7 @@ async function main() {
     const ua = args.ua || defaultUA;
 
     console.log(`Launching browser → ${url}`);
-    const browser = await chromium.launch({ headless: true });
+    const browser = await chromium.launch({ headless: false });
     const context = await browser.newContext({ userAgent: ua });
 
     if (args.cookie) {
